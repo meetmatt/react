@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import Friend from "../types/Friend";
-import FriendList from "./FriendList.tsx";
-import FriendAddForm from "./FriendAddForm.tsx";
+import Friend from "./Friend/types/Friend";
+import FriendList from "./Friend/FriendList.tsx";
+import FriendAddForm from "./Friend/FriendAddForm.tsx";
+import BillForm from "./Bill/BillForm.tsx";
 
 const initialFriends: Friend[] = [
   {
@@ -26,19 +27,39 @@ const initialFriends: Friend[] = [
 
 const SplitTheBill: React.FC = () => {
   const [friends, setFriends] = useState<Friend[]>(initialFriends.slice())
+  const [selectedFriend, setSelectedFriend] = useState<null | Friend>(null)
 
-  function handleOnAddFriend(friend: Friend): void {
+  function handleAddFriend(friend: Friend) {
     setFriends((friends: Friend[]) => {
         return [...friends, friend]
       }
     )
   }
 
+  function handleFriendSelect(selectedFriend: Friend | null) {
+    setSelectedFriend(selectedFriend)
+  }
+
+  function handleSplitBill(amount: number) {
+    setFriends((friends: Friend[]) => {
+        return friends.map((friend: Friend) => {
+          return friend == selectedFriend ? {...friend, balance: friend.balance + amount} : friend
+        })
+      }
+    )
+    setSelectedFriend(null)
+  }
+
   return <div className="app">
     <div className="sidebar">
-      <FriendList friends={friends}/>
-      <FriendAddForm onAddFriend={handleOnAddFriend}/>
+      <FriendList
+        friends={friends}
+        selectedFriend={selectedFriend ?? null}
+        onSelect={handleFriendSelect}
+      />
+      <FriendAddForm onAddFriend={handleAddFriend}/>
     </div>
+    {selectedFriend && <BillForm selectedFriend={selectedFriend} onSplitBill={handleSplitBill}/>}
   </div>
 }
 
