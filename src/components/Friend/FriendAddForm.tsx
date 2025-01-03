@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import TextInput from "../Form/TextInput.tsx";
-import Button from "../Form/Button.tsx";
-import Friend from "./types/Friend";
+import React, {useState} from "react"
+import TextInput from "../Form/TextInput.tsx"
+import Button from "../Form/Button.tsx"
+import Friend from "./types/Friend"
 
 interface AddFriendProps {
   onAddFriend: (_friend: Friend) => void

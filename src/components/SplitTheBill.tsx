@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import Friend from "./Friend/types/Friend";
-import FriendList from "./Friend/FriendList.tsx";
-import FriendAddForm from "./Friend/FriendAddForm.tsx";
-import BillForm from "./Bill/BillForm.tsx";
+import React, {useState} from "react"
+import Friend from "./Friend/types/Friend"
+import FriendList from "./Friend/FriendList.tsx"
+import FriendAddForm from "./Friend/FriendAddForm.tsx"
+import BillForm from "./Bill/BillForm.tsx"
 
 const initialFriends: Friend[] = [
   {

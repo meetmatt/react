@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
 interface SelectInputProps {
-  children: React.ReactNode,
-  value: string;
-  options: Record<string, string>;
-  onChange?: (_event: React.ChangeEvent<HTMLSelectElement>) => void;
+  children: React.ReactNode
+  value: string
+  options: Record<string, string>
+  onChange?: (_event: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
 const SelectInput: React.FC<SelectInputProps> = (

@@ -1,11 +1,11 @@
-import React from "react";
-import Button from "../Form/Button.tsx";
-import Friend from "./types/Friend";
+import React from "react"
+import Button from "../Form/Button.tsx"
+import Friend from "./types/Friend"
 
 interface FriendProps {
-  friend: Friend,
-  isSelected: boolean,
-  onSelect: (_friend: Friend | null) => void,
+  friend: Friend
+  isSelected: boolean
+  onSelect: (_friend: Friend | null) => void
 }
 
 const FriendListItem: React.FC<FriendProps> = ({friend, isSelected, onSelect}) => {

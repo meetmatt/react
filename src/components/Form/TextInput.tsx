@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
 interface TextInputProps {
-  children: React.ReactNode,
-  value: string | number;
-  autofocus?: boolean;
-  readonly?: boolean;
-  disabled?: boolean;
-  onChange?: (_event: React.ChangeEvent<HTMLInputElement>) => void;
+  children: React.ReactNode
+  value: string | number
+  autofocus?: boolean
+  readonly?: boolean
+  disabled?: boolean
+  onChange?: (_event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const TextInput: React.FC<TextInputProps> = (

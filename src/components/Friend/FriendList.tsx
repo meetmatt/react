@@ -1,11 +1,11 @@
-import React from "react";
-import FriendListItem from "./FriendListItem.tsx";
-import Friend from "./types/Friend";
+import React from "react"
+import FriendListItem from "./FriendListItem.tsx"
+import Friend from "./types/Friend"
 
 interface FriendListProps {
-  friends: Friend[],
-  selectedFriend: Friend | null,
-  onSelect: (_friend: Friend | null) => void,
+  friends: Friend[]
+  selectedFriend: Friend | null
+  onSelect: (_friend: Friend | null) => void
 }
 
 const FriendList: React.FC<FriendListProps> = ({friends, selectedFriend, onSelect}) => {

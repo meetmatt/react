@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-import Friend from "../Friend/types/Friend";
-import TextInput from "../Form/TextInput.tsx";
-import SelectInput from "../Form/SelectInput.tsx";
-import Button from "../Form/Button.tsx";
+import React, {useState} from "react"
+import Friend from "../Friend/types/Friend"
+import TextInput from "../Form/TextInput.tsx"
+import SelectInput from "../Form/SelectInput.tsx"
+import Button from "../Form/Button.tsx"
 
 interface BillFormProps {
-  selectedFriend: Friend;
-  onSplitBill: (_amount: number) => void;
+  selectedFriend: Friend
+  onSplitBill: (_amount: number) => void
 }
 
 const BillForm: React.FC<BillFormProps> = ({selectedFriend, onSplitBill}) => {
