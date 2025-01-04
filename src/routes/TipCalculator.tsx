@@ -1,8 +1,8 @@
-import React, {useState} from "react"
-import Summary from "./Summary.tsx";
-import Reset from "./Reset.tsx";
-import Bill from "./Bill.tsx";
-import TipSelect from "./TipSelect.tsx";
+import React, {useState} from 'react'
+import Summary from '../components/TipCalculator/Summary.tsx'
+import Reset from '../components/TipCalculator/Reset.tsx'
+import Bill from '../components/TipCalculator/Bill.tsx'
+import TipSelect from '../components/TipCalculator/TipSelect.tsx'
 
 export default function TipCalculator() {
   const [bill, setBill] = useState<number>(0)

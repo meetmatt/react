@@ -1,7 +1,0 @@
-#root {
-    display: flex;
-    max-width: 600px;
-}
-label {
-    margin: 0 .5em;
-}
